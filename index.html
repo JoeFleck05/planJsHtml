@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    div#main {
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      width: auto;
+      height: auto;
+      border: 20px solid #969696;
+      background: #d9dbda;
+      margin: 10px;
+    }
+  </style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"> -->
+    <title>Car Picker</title>
+    <script src="./src.js"></script>
+  </head>
+  <body>
+    <h1>
+      MY SITE
+    </h1>
+    <div id="main" style="float: left;">
+      <hr />
+      <!-- <div id='manufacture'> -->
+        <h2>Manufacture:</h2>
+        <select id="manufacturer" name="manufacturer" onchange="modelList(this.id, 'select')">
+          <option value="">--- Select a Manufacture ---</option>
+          <option value="Ford">Ford</option>
+          <option value="Toyota">Toyota</option>
+          <option value="Honda">Honda</option>
+        </select>
+        <hr />
+      <!-- </div> -->
+    </div>
+  </div>
+    
+  </body>
+</html>
