@@ -1,17 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <style>
-    div#main {
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      width: auto;
-      height: auto;
-      border: 20px solid #969696;
-      background: #d9dbda;
-      margin: 10px;
-    }
-  </style>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,13 +11,13 @@
   </head>
   <body>
     <h1>
-      MY SITE
+      Pick your Car
     </h1>
-    <div id="main" style="float: left;">
+    <div class="mainDiv" id="main">
       <hr />
       <!-- <div id='manufacture'> -->
         <h2>Manufacture:</h2>
-        <select id="manufacturer" name="manufacturer" onchange="modelList(this.id, 'select')">
+        <select class="manufacturerSelect" id="manufacturer" name="manufacturer" onchange="modelList(this.id, 'select')">
           <option value="">--- Select a Manufacture ---</option>
           <option value="Ford">Ford</option>
           <option value="Toyota">Toyota</option>

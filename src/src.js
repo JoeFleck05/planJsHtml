@@ -50,6 +50,7 @@ function modelList(slct1, htmlElement){
     }
 
     let element = document.createElement(htmlElement);
+    element.setAttribute('class','modelSelect');
     element.setAttribute('id', 'selectModel');
     element.setAttribute('name', 'selectModel');
     element.setAttribute('onchange', "seriesList(this.id, 'select')");
@@ -89,6 +90,7 @@ function seriesList(selectId, htmlElement){
     let selectedManufacturer = manufacturer.value;
 
     let element = document.createElement(htmlElement);
+    element.setAttribute('class','seriesSelect');
     element.setAttribute('id', 'selectSeries');
     element.setAttribute('name', 'selectSeries');
     element.setAttribute('onchange', `selectedImage(this.id, "${modelSel}", "${selectedManufacturer}")`);
@@ -125,9 +127,10 @@ function selectedImage(seriesObj, model, manufacturer){
     }
 
     let divElement = document.createElement('div');
+    divElement.setAttribute('class','rightDiv');
     divElement.setAttribute('id','rightDiv');
     divElement.setAttribute('name','rightDiv');
-    divElement.setAttribute('style','width: 80%; height: 900px; float: right;');
+    // divElement.setAttribute('style','width: auto; height: auto;');
 
     document.body.appendChild(divElement);
     let imgElement = document.createElement('img');
