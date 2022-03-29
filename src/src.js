@@ -41,12 +41,21 @@ function modelList(slct1, htmlElement){
     let mainDiv = document.getElementById('main');
     let modelHtmlElement = document.getElementById('Model');
     let seriesHtmlElement = document.getElementById('Series');
+    let imageHtmlElement = document.getElementById('rightDiv');
 
+    // resetting model list drop down
     if (modelHtmlElement !== null){
         modelHtmlElement.remove();
     }
+
+    // resetting series list drop down
     if (seriesHtmlElement !== null){
         seriesHtmlElement.remove();
+    }
+    
+    // resetting image when new manufacture selected
+    if(imageHtmlElement !== null){
+        imageHtmlElement.remove();
     }
 
     let element = document.createElement(htmlElement);
@@ -122,7 +131,9 @@ function selectedImage(seriesObj, model, manufacturer){
     console.log(`SERIES: ${valueObj.value}`);
 
     let rightDivElement = document.getElementById('rightDiv');
+    console.log(`<><> ${rightDivElement} <><>`);
     if (rightDivElement !== null) {
+        console.log(`REMOVE IMG DIV!`)
         rightDivElement.remove();
     }
 
