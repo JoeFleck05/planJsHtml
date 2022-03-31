@@ -36,7 +36,7 @@ function listManufacture(manuObj, field){
     cont.appendChild(s1);
 }
 
-function modelList(slct1, htmlElement){
+async function modelList(slct1, htmlElement){
     
     let mainDiv = document.getElementById('main');
     let modelHtmlElement = document.getElementById('Model');
@@ -52,7 +52,7 @@ function modelList(slct1, htmlElement){
     if (seriesHtmlElement !== null){
         seriesHtmlElement.remove();
     }
-    
+
     // resetting image when new manufacture selected
     if(imageHtmlElement !== null){
         imageHtmlElement.remove();
@@ -69,12 +69,12 @@ function modelList(slct1, htmlElement){
     let horizontalLine = document.createElement('hr');
     header.innerHTML = "Model:";
     let s1 = document.getElementById(slct1);
-    let modelObj = model(s1.value);
-
-    modelObj.forEach((model) => {
+    let modelObj = await model(s1.value);
+    Object.entries(modelObj).forEach(model =>{
+        const [key, value] = model;
         let modelOption = document.createElement('option');
-        modelOption.value = model['value'];
-        modelOption.innerHTML = model['innerHtml'];
+        modelOption.value = value.value;
+        modelOption.innerHTML = value.innerHtml;
         element.options.add(modelOption);
     });
     divModel.appendChild(header);
@@ -83,7 +83,7 @@ function modelList(slct1, htmlElement){
     mainDiv.appendChild(divModel);
 }
 
-function seriesList(selectId, htmlElement){
+async function seriesList(selectId, htmlElement){
     console.log(`${selectId} <==> ${htmlElement}`);
     let mainDiv = document.getElementById('main');
     let seriesHtmlElement = document.getElementById('Series');
@@ -110,12 +110,13 @@ function seriesList(selectId, htmlElement){
     let horizontalLine = document.createElement('hr');
     header.innerHTML = "Series:";
     let s1 = document.getElementById(selectId);
-    let seriesObj = getSeries(selectedManufacturer, s1.value);
+    let seriesObj = await getSeries(selectedManufacturer, s1.value);
 
-    seriesObj.forEach((series) => {
+    Object.entries(seriesObj).forEach(exactSeries =>{
+        const [key, value] = exactSeries;
         let modelOption = document.createElement('option');
-        modelOption.value = series['value'];
-        modelOption.innerHTML = series['innerHtml'];
+        modelOption.value = value.value;
+        modelOption.innerHTML = value.innerHtml;
         element.options.add(modelOption);
     });
     divModel.appendChild(header);
@@ -191,232 +192,182 @@ function manufactureTypes(){
     return manufactureData;
 }
 
-function model(manuObj){
-    let model = {
-        "Ford": [
-            {
-                value: "",
-                innerHtml: "--- Select a model ---"
-            },
-            {
-                value: "F-150",
-                innerHtml: "F-150"
-            },
-            {
-                value: "Mustang",
-                innerHtml: "Mustang"
-            },
-            {
-                value: "Bronco",
-                innerHtml: "Bronco"
-            },
-
-        ],
-        "Toyota": [
-            {
-                value: "",
-                innerHtml: "--- Select a model ---"
-            },
-            {
-                value: "Tundra",
-                innerHtml: "Tundra"
-            },
-            {
-                value: "Camry",
-                innerHtml: "Camry"
-            },
-            {
-                value: "Corolla",
-                innerHtml: "Corolla"
-            },
-
-        ],
-        "Honda": [
-            {
-                value: "",
-                innerHtml: "--- Select a model ---"
-            },
-            {
-                value: "Accord",
-                innerHtml: "Accord"
-            },
-            {
-                value: "Civic",
-                innerHtml: "Civic"
-            },
-            {
-                value: "Cr-z",
-                innerHtml: "Cr-z"
-            },
-        ]
-    }
-    return model[manuObj];
+async function model(manuObj){
+    let modelObj = await fetch('../data/model.json')
+    .then(response => response.json())
+    .catch(error => console.log(error));    
+    return modelObj[manuObj];
 }
 
-function getSeries(manufacturer, model){
+async function getSeries(manufacturer, model){
+    let seriesObj = await fetch('../data/series.json')
+    .then(response => response.json())
+    .catch(error => console.log(error));
+
+    return seriesObj[manufacturer][model];
 		
-	let series = {
-        "Ford":{
-            "Bronco": [
-                {
-                    value: "",
-                    innerHtml: "--- Select a series ---"
-                },{
-                    value: "Sport",
-                    innerHtml: "Sport"
-                },{
-                    value: "Regular",
-                    innerHtml: "Regular"
-                }
-            ],
-            "Mustang": [
-                {
-                    value: "",
-                    innerHtml: "--- Select a series ---"
-                },{
-                    value: "V6",
-                    innerHtml: "V6"
-                },{
-                    value: "GT Fastback",
-                    innerHtml: "GT Fastback"
-                },{
-                    value: "Shelby GT500",
-                    innerHtml: "Shelby GT500"
-                }
-            ],
-            "F-150": [
-                {
-                    value: "",
-                    innerHtml: "--- Select a series ---"
-                },{
-                    value: "XL",
-                    innerHtml: "XL"
-                },{
-                    value: "XLT",
-                    innerHtml: "XLT"
-                },{
-                    value: "Lariat",
-                    innerHtml: "Lariat"
-                }
-            ]
-        },
-        "Hyundai":{
-            "Elantra": [
-                {
-                    value: "",
-                    innerHtml: "--- Select a series ---"
-                },{
-                    value: "GT",
-                    innerHtml: "GT"
-                },{
-                    value: "SE",
-                    innerHtml: "SE"
-                },{
-                    value: "Limited",
-                    innerHtml: "Limited"
-                },{
-                    value: "SEL",
-                    innerHtml: "SEL"
-                }
-            ]
-        },
-        "Toyota":{
-            "Tundra": [
-                {
-                    value: "",
-                    innerHtml: "--- Select a series ---"
-                },{
-                    value: "Platinum CrewMax",
-                    innerHtml: "Platinum CrewMax"
-                },{
-                    value: "SR5 CrewMax",
-                    innerHtml: "SR5 CrewMax"
-                },{
-                    value: "TRD CrewMax",
-                    innerHtml: "TRD CrewMax"
-                }
-            ],
-            "Corolla": [
-                {
-                    value: "",
-                    innerHtml: "--- Select a series ---"
-                },{
-                    value: "LE",
-                    innerHtml: "LE"
-                },{
-                    value: "SE",
-                    innerHtml: "SE"
-                },{
-                    value: "Nightshade Edition",
-                    innerHtml: "Nightshade Edition"
-                }
-            ],
-            "Camry": [
-                {
-                    value: "",
-                    innerHtml: "--- Select a series ---"
-                },{
-                    value: "LE",
-                    innerHtml: "LE"
-                },{
-                    value: "SE",
-                    innerHtml: "SE"
-                },{
-                    value: "XLE",
-                    innerHtml: "XLE"
-                }
-            ],
-        },
-        "Honda":{
-            "Accord": [
-                {
-                    value: "",
-                    innerHtml: "--- Select a series ---"
-                },{
-                    value: "EX",
-                    innerHtml: "EX"
-                },{
-                    value: "EX-L",
-                    innerHtml: "EX-L"
-                },{
-                    value: "LX",
-                    innerHtml: "LX"
-                },{
-                    value: "Touring",
-                    innerHtml: "Touring"
-                }
-            ],
-            "Civic": [
-                {
-                    value: "",
-                    innerHtml: "--- Select a series ---"
-                },{
-                    value: "EX",
-                    innerHtml: "EX"
-                },{
-                    value: "EX-L",
-                    innerHtml: "EX-L"
-                },{
-                    value: "LX",
-                    innerHtml: "LX"
-                },{
-                    value: "Touring",
-                    innerHtml: "Touring"
-                }
-            ],
-            "Cr-z": [
-                {
-                    value: "",
-                    innerHtml: "--- Select a series ---"
-                },{
-                    value: "Base",
-                    innerHtml: "Base"
-                },{
-                    value: "EX",
-                    innerHtml: "EX"
-                }
-            ]
-        }
-    }
-	return series[manufacturer][model];
+	// let series = {
+    //     "Ford":{
+    //         "Bronco": [
+    //             {
+    //                 value: "",
+    //                 innerHtml: "--- Select a series ---"
+    //             },{
+    //                 value: "Sport",
+    //                 innerHtml: "Sport"
+    //             },{
+    //                 value: "Regular",
+    //                 innerHtml: "Regular"
+    //             }
+    //         ],
+    //         "Mustang": [
+    //             {
+    //                 value: "",
+    //                 innerHtml: "--- Select a series ---"
+    //             },{
+    //                 value: "V6",
+    //                 innerHtml: "V6"
+    //             },{
+    //                 value: "GT Fastback",
+    //                 innerHtml: "GT Fastback"
+    //             },{
+    //                 value: "Shelby GT500",
+    //                 innerHtml: "Shelby GT500"
+    //             }
+    //         ],
+    //         "F-150": [
+    //             {
+    //                 value: "",
+    //                 innerHtml: "--- Select a series ---"
+    //             },{
+    //                 value: "XL",
+    //                 innerHtml: "XL"
+    //             },{
+    //                 value: "XLT",
+    //                 innerHtml: "XLT"
+    //             },{
+    //                 value: "Lariat",
+    //                 innerHtml: "Lariat"
+    //             }
+    //         ]
+    //     },
+    //     "Hyundai":{
+    //         "Elantra": [
+    //             {
+    //                 value: "",
+    //                 innerHtml: "--- Select a series ---"
+    //             },{
+    //                 value: "GT",
+    //                 innerHtml: "GT"
+    //             },{
+    //                 value: "SE",
+    //                 innerHtml: "SE"
+    //             },{
+    //                 value: "Limited",
+    //                 innerHtml: "Limited"
+    //             },{
+    //                 value: "SEL",
+    //                 innerHtml: "SEL"
+    //             }
+    //         ]
+    //     },
+    //     "Toyota":{
+    //         "Tundra": [
+    //             {
+    //                 value: "",
+    //                 innerHtml: "--- Select a series ---"
+    //             },{
+    //                 value: "Platinum CrewMax",
+    //                 innerHtml: "Platinum CrewMax"
+    //             },{
+    //                 value: "SR5 CrewMax",
+    //                 innerHtml: "SR5 CrewMax"
+    //             },{
+    //                 value: "TRD CrewMax",
+    //                 innerHtml: "TRD CrewMax"
+    //             }
+    //         ],
+    //         "Corolla": [
+    //             {
+    //                 value: "",
+    //                 innerHtml: "--- Select a series ---"
+    //             },{
+    //                 value: "LE",
+    //                 innerHtml: "LE"
+    //             },{
+    //                 value: "SE",
+    //                 innerHtml: "SE"
+    //             },{
+    //                 value: "Nightshade Edition",
+    //                 innerHtml: "Nightshade Edition"
+    //             }
+    //         ],
+    //         "Camry": [
+    //             {
+    //                 value: "",
+    //                 innerHtml: "--- Select a series ---"
+    //             },{
+    //                 value: "LE",
+    //                 innerHtml: "LE"
+    //             },{
+    //                 value: "SE",
+    //                 innerHtml: "SE"
+    //             },{
+    //                 value: "XLE",
+    //                 innerHtml: "XLE"
+    //             }
+    //         ],
+    //     },
+    //     "Honda":{
+    //         "Accord": [
+    //             {
+    //                 value: "",
+    //                 innerHtml: "--- Select a series ---"
+    //             },{
+    //                 value: "EX",
+    //                 innerHtml: "EX"
+    //             },{
+    //                 value: "EX-L",
+    //                 innerHtml: "EX-L"
+    //             },{
+    //                 value: "LX",
+    //                 innerHtml: "LX"
+    //             },{
+    //                 value: "Touring",
+    //                 innerHtml: "Touring"
+    //             }
+    //         ],
+    //         "Civic": [
+    //             {
+    //                 value: "",
+    //                 innerHtml: "--- Select a series ---"
+    //             },{
+    //                 value: "EX",
+    //                 innerHtml: "EX"
+    //             },{
+    //                 value: "EX-L",
+    //                 innerHtml: "EX-L"
+    //             },{
+    //                 value: "LX",
+    //                 innerHtml: "LX"
+    //             },{
+    //                 value: "Touring",
+    //                 innerHtml: "Touring"
+    //             }
+    //         ],
+    //         "Cr-z": [
+    //             {
+    //                 value: "",
+    //                 innerHtml: "--- Select a series ---"
+    //             },{
+    //                 value: "Base",
+    //                 innerHtml: "Base"
+    //             },{
+    //                 value: "EX",
+    //                 innerHtml: "EX"
+    //             }
+    //         ]
+    //     }
+    // }
+	// return series[manufacturer][model];
 }
