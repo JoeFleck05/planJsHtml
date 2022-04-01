@@ -1,0 +1,168 @@
+{
+    "Civic":{
+        "XL":[
+            "28 City / 38 Hwy",
+            "Manual, 6-Spd",
+            "4-Cyl, i-VTEC, 2.0 Liter",
+            "FWD",
+            "5 seats",
+            "$ Door Sedan"
+        ],
+        "EX-L":[
+            "32 City / 42 Hwy",
+            "Automatic, CVT",
+            "4-Cyl, Turbo, 1.5 Liter",
+            "FWD",
+            "5 seats",
+            "$ Door Sedan"
+        ],
+        "EX":[
+            "32 City / 42 Hwy",
+            "Automatic, CVT",
+            "4-Cyl, Turbo, 1.5 Liter",
+            "FWD",
+            "5 seats",
+            "4 Door Sedan"
+        ],
+        "Touring":[
+            "32 City / 42 Hwy",
+            "Automatic, CVT",
+            "4-Cyl, Turbo, 1.5 Liter",
+            "FWD",
+            "5 seats",
+            "4 Door Sedan"
+        ]
+    },
+    "Accord":{
+        "XL":[
+            "V6, i-VTEC, 3.5 Liter",
+            "Beige Interior Color",
+            "Beige Exterior Color",
+            "4 Door Sedan21 City / 33 Hwy",
+            "Auto, 6-Spd w/Sport Mode",
+            "FWD"
+        ],
+        "EX-L":[
+            "4-Cyl, i-VTEC, 2.4 Liter",
+            "Beige Interior Color",
+            "Red Exterior Color",
+            "4 Door Sedan",
+            "27 City / 36 Hwy",
+            "Auto, CVT w/Sport Mode",
+            "FWD"
+        ],
+        "EX":[
+            "4-Cyl, i-VTEC, 2.4 Liter",
+            "Black Interior Color",
+            "Black Exterior Color",
+            "4 Door Sedan",
+            "27 City / 36 Hwy",
+            "Auto, CVT w/Sport Mode",
+            "FWD"
+        ],
+        "Touring":[
+            "4-Cyl, i-VTEC, Turbo, 1.5 Liter",
+            "29 City / 35 Hwy",
+            "Auto, CVT w/Sport Mode",
+            "FWD",
+            "5 seats",
+            "4 Door Sedan"
+        ]
+    },
+    "Cr-z":{
+        "EX":[
+            "4-Cyl, Hybrid i-VTEC 1.5L",
+            "Black Interior Color",
+            "Gray Exterior Color",
+            "2 Door Coupe",
+            "36 City / 39 Hwy",
+            "Automatic, CVT",
+            "FWD"
+        ],
+        "Base":[
+            "4-Cyl, Hybrid i-VTEC 1.5L",
+            "Black Interior Color",
+            "Gray Exterior Color",
+            "2 Door Coupe",
+            "36 City / 39 Hwy",
+            "Automatic, CVT",
+            "FWD"
+        ]
+    },
+    "F-150":{
+        "XL":[
+            "V6, EcoBoost, Twin Turbo, 3.5 Liter",
+            "White Exterior Color",
+            "4 Door Truck",
+            "16 City / 22 Hwy",
+            "Automatic, 10-Spd w/Sport Mode",
+            "4WD"
+        ],
+        "XLT":[
+            "V8, Flex Fuel, 5.0 Liter",
+            "Black Interior Color",
+            "Black Exterior Color",
+            "4 Door Truck",
+            "Auto, 10-Spd Spt Mode",
+            "4WD"
+        ],
+        "Lariat":[
+            "V6, Hybrid, PowerBoost, 3.5 Liter",
+            "Black Interior Color",
+            "White Exterior Color",
+            "4 Door Truck",
+            "24 City / 24 Hwy",
+            "Automatic, 10-Spd Hybrid Electronic",
+            "4WD"
+        ]
+    },
+    "Mustang":{
+        "Mustang V6":[
+            "V8, 5.0 Liter",
+            "Black Interior Color",
+            "Red Exterior Color",
+            "2 Door Coupe",
+            "16 City / 25 Hwy",
+            "Auto, 10-Spd SelectShft",
+            "RWD"
+        ],
+        "Mustang GT Fastback":[
+            "V8, 5.0 Liter",
+            "Black Interior Color",
+            "Silver Exterior Color",
+            "2 Door Coupe",
+            "16 City / 25 Hwy",
+            "Automatic, 10-Spd w/SelectShift",
+            "RWD"
+        ],
+        "Mustang Shelby GT500":[
+            "V8, Supercharged, 5.8L",
+            "Black Interior Color",
+            "White Exterior Color",
+            "2 Door Coupe",
+            "15 City / 24 Hwy",
+            "Manual, 6-Spd",
+            "RWD"
+        ]
+    },
+    "Bronco":{
+        "Bronco Sport":[
+            "3-Cyl, EcoBoost, Turbo, 1.5 Liter",
+            "Gray Interior Color",
+            "Gray Exterior Color",
+            "4 Door SUV",
+            "25 City / 28 Hwy",
+            "Automatic, 8-Spd",
+            "4WD"
+        ],
+        "Bronco Regular":[
+            "3-Cyl, EcoBoost, Turbo, 1.5 Liter",
+            "Black Interior Color",
+            "Black Exterior Color",
+            "4 Door SUV",
+            "25 City / 28 Hwy",
+            "Automatic, 8-Spd",
+            "4WD"
+        ]
+    }   
+}
