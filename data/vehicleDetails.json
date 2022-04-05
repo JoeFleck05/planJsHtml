@@ -1,11 +1,11 @@
 {
     "Civic":{
-        "XL":{
+        "LX":{
             "Gas Mileage": "28 City / 38 Hwy",
             "Transmission": "Manual, 6-Spd",
             "Engine": "4-Cyl, i-VTEC, 2.0 Liter",
-            "Interior Color": "Black Interior Color",
-            "Exterior Color": "Brown Exterior Color",
+            "Interior Color": "Gray Interior Color",
+            "Exterior Color": "Black Exterior Color",
             "Number Doors": "4 Door Sedan",
             "Driver Train": "FWD"
         },
@@ -13,14 +13,14 @@
             "Gas Mileage": "32 City / 42 Hwy",
             "Transmission": "Automatic, CVT",
             "Engine": "4-Cyl, Turbo, 1.5 Liter",
-            "Interior Color": "Black Interior Color",
-            "Exterior Color": "Gray Exterior Color",
+            "Interior Color": "Beige Interior Color",
+            "Exterior Color": "White Exterior Color",
             "Driver Train": "FWD",
             "Number Doors": "4 Door Sedan"
         },
         "EX":{
-            "Interior Color": "Black Interior Color",
-            "Exterior Color": "Gray Exterior Color",
+            "Interior Color": "Beige Interior Color",
+            "Exterior Color": "Black Exterior Color",
             "Gas Mileage": "32 City / 42 Hwy",
             "Engine": "4-Cyl, Turbo, 1.5 Liter",
             "Number Doors": "4 Door Sedan",
@@ -31,14 +31,14 @@
             "Gas Mileage": "32 City / 42 Hwy",
             "Transmission": "Automatic, CVT",
             "Engine": "4-Cyl, Turbo, 1.5 Liter",
-            "Interior Color": "Black Interior Color",
-            "Exterior Color": "Gray Exterior Color",
+            "Interior Color": "Beige Interior Color",
+            "Exterior Color": "White Exterior Color",
             "Number Doors": "4 Door Sedan",
             "Driver Train": "FWD"
         }
     },
     "Accord":{
-        "XL":{
+        "LX":{
             "Engine": "V6, i-VTEC, 3.5 Liter",
             "Interior Color": "Beige Interior Color",
             "Exterior Color": "Beige Exterior Color",
@@ -57,8 +57,8 @@
         },
         "EX":{
             "Engine": "4-Cyl, i-VTEC, 2.4 Liter",
-            "Interior Color": "Black Interior Color",
-            "Exterior Color": "Black Exterior Color",
+            "Interior Color": "Gray Interior Color",
+            "Exterior Color": "Silver Exterior Color",
             "Number Doors": "4 Door Sedan",
             "Gas Mileage": "27 City / 36 Hwy",
             "Transmission": "Auto, CVT w/Sport Mode",
@@ -67,7 +67,7 @@
         "Touring":{
             "Engine": "4-Cyl, i-VTEC, Turbo, 1.5 Liter",
             "Interior Color": "Black Interior Color",
-            "Exterior Color": "Black Exterior Color",
+            "Exterior Color": "White Exterior Color",
             "Gas Mileage": "29 City / 35 Hwy",
             "Transmission": "Auto, CVT w/Sport Mode",
             "Number Doors": "4 Door Sedan",
@@ -78,7 +78,7 @@
         "EX":{
             "Engine": "4-Cyl, Hybrid i-VTEC 1.5L",
             "Interior Color": "Black Interior Color",
-            "Exterior Color": "Gray Exterior Color",
+            "Exterior Color": "White Exterior Color",
             "Number Doors": "2 Door Coupe",
             "Gas Mileage": "36 City / 39 Hwy",
             "Transmission": "Automatic, CVT",
@@ -86,8 +86,8 @@
         },
         "Base":{
             "Engine": "4-Cyl, Hybrid i-VTEC 1.5L",
-            "Interior Color": "Black Interior Color",
-            "Exterior Color": "Gray Exterior Color",
+            "Interior Color": "Gray Interior Color",
+            "Exterior Color": "Red Exterior Color",
             "Number Doors": "2 Door Coupe",
             "Gas Mileage": "36 City / 39 Hwy",
             "Transmission": "Automatic, CVT",
@@ -115,7 +115,7 @@
         },
         "Lariat":{
             "Engine": "V6, Hybrid, PowerBoost, 3.5 Liter",
-            "Interior Color": "Black Interior Color",
+            "Interior Color": "Gray Interior Color",
             "Exterior Color": "White Exterior Color",
             "Number Doors": "4 Door Truck",
             "Gas Mileage": "24 City / 24 Hwy",
@@ -145,7 +145,7 @@
         "Shelby GT500":{
             "Engine": "V8, Supercharged, 5.8L",
             "Interior Color": "Black Interior Color",
-            "Exterior Color": "White Exterior Color",
+            "Exterior Color": "Red Exterior Color",
             "Number Doors": "2 Door Coupe",
             "Gas Mileage": "15 City / 24 Hwy",
             "Transmission": "Manual, 6-Spd",
@@ -153,16 +153,16 @@
         }
     },
     "Bronco":{
-        "Bronco Sport":{
+        "Sport":{
             "Engine": "3-Cyl, EcoBoost, Turbo, 1.5 Liter",
-            "Interior Color": "Gray Interior Color",
+            "Interior Color": "Red Interior Color",
             "Exterior Color": "Gray Exterior Color",
             "Number Doors": "4 Door SUV",
             "Gas Mileage": "25 City / 28 Hwy",
             "Transmission": "Automatic, 8-Spd",
             "Driver Train": "4WD"
         },
-        "Bronco Regular":{
+        "Regular":{
             "Engine": "3-Cyl, EcoBoost, Turbo, 1.5 Liter",
             "Interior Color": "Black Interior Color",
             "Exterior Color": "Black Exterior Color",
@@ -175,7 +175,7 @@
     "Camry":{
         "LE":{
             "Engine": "4-Cyl, 2.5 Liter",
-            "Interior Color": "Black Interior Color",
+            "Interior Color": "Gray Interior Color",
             "Exterior Color": "Gray Exterior Color",
             "Number Doors": "4 Door Sedan",
             "Gas Mileage": "28 City / 39 Hwy",
@@ -184,7 +184,7 @@
         },
         "SE":{
             "Engine": "4-Cyl, 2.5 Liter",
-            "Interior Color": "Black Interior Color",
+            "Interior Color": "Gray Interior Color",
             "Exterior Color": "Silver Exterior Color",
             "Number Doors": "4 Door Sedan",
             "Gas Mileage": "28 City / 39 Hwy",
@@ -234,7 +234,7 @@
         "Platinum CrewMax":{
             "Engine": "V8, 5.7 Liter",
             "Interior Color": "Black Interior Color",
-            "Exterior Color": "Brown Exterior Color",
+            "Exterior Color": "Gray Exterior Color",
             "Number Doors": "4 Door Truck",
             "Gas Mileage": "13 City / 17 Hwy",
             "Transmission": "Auto, 6-Spd Sequential",
