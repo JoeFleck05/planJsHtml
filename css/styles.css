@@ -60,3 +60,26 @@ select{
     margin-left: 10px;
     margin-right: 10px;
 }
+
+label{
+    padding-inline-end: 5px;
+    background-color: #eee;
+    border-radius: 10px;
+    color: #1c87c9;
+    font-size: 18px;
+    border: 1px solid #999;
+    width: auto;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td{
+    padding: 20px 40px;
+    font-size: 18px;
+}

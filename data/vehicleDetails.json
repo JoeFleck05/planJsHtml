@@ -1,168 +1,262 @@
 {
     "Civic":{
-        "XL":[
-            "28 City / 38 Hwy",
-            "Manual, 6-Spd",
-            "4-Cyl, i-VTEC, 2.0 Liter",
-            "FWD",
-            "5 seats",
-            "$ Door Sedan"
-        ],
-        "EX-L":[
-            "32 City / 42 Hwy",
-            "Automatic, CVT",
-            "4-Cyl, Turbo, 1.5 Liter",
-            "FWD",
-            "5 seats",
-            "$ Door Sedan"
-        ],
-        "EX":[
-            "32 City / 42 Hwy",
-            "Automatic, CVT",
-            "4-Cyl, Turbo, 1.5 Liter",
-            "FWD",
-            "5 seats",
-            "4 Door Sedan"
-        ],
-        "Touring":[
-            "32 City / 42 Hwy",
-            "Automatic, CVT",
-            "4-Cyl, Turbo, 1.5 Liter",
-            "FWD",
-            "5 seats",
-            "4 Door Sedan"
-        ]
+        "XL":{
+            "Gas Mileage": "28 City / 38 Hwy",
+            "Transmission": "Manual, 6-Spd",
+            "Engine": "4-Cyl, i-VTEC, 2.0 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Brown Exterior Color",
+            "Number Doors": "4 Door Sedan",
+            "Driver Train": "FWD"
+        },
+        "EX-L":{
+            "Gas Mileage": "32 City / 42 Hwy",
+            "Transmission": "Automatic, CVT",
+            "Engine": "4-Cyl, Turbo, 1.5 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Gray Exterior Color",
+            "Driver Train": "FWD",
+            "Number Doors": "4 Door Sedan"
+        },
+        "EX":{
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Gray Exterior Color",
+            "Gas Mileage": "32 City / 42 Hwy",
+            "Engine": "4-Cyl, Turbo, 1.5 Liter",
+            "Number Doors": "4 Door Sedan",
+            "Transmission": "Auto, 6-Spd w/Sport Mode",
+            "Driver Train": "FWD"
+        },
+        "Touring":{
+            "Gas Mileage": "32 City / 42 Hwy",
+            "Transmission": "Automatic, CVT",
+            "Engine": "4-Cyl, Turbo, 1.5 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Gray Exterior Color",
+            "Number Doors": "4 Door Sedan",
+            "Driver Train": "FWD"
+        }
     },
     "Accord":{
-        "XL":[
-            "V6, i-VTEC, 3.5 Liter",
-            "Beige Interior Color",
-            "Beige Exterior Color",
-            "4 Door Sedan21 City / 33 Hwy",
-            "Auto, 6-Spd w/Sport Mode",
-            "FWD"
-        ],
-        "EX-L":[
-            "4-Cyl, i-VTEC, 2.4 Liter",
-            "Beige Interior Color",
-            "Red Exterior Color",
-            "4 Door Sedan",
-            "27 City / 36 Hwy",
-            "Auto, CVT w/Sport Mode",
-            "FWD"
-        ],
-        "EX":[
-            "4-Cyl, i-VTEC, 2.4 Liter",
-            "Black Interior Color",
-            "Black Exterior Color",
-            "4 Door Sedan",
-            "27 City / 36 Hwy",
-            "Auto, CVT w/Sport Mode",
-            "FWD"
-        ],
-        "Touring":[
-            "4-Cyl, i-VTEC, Turbo, 1.5 Liter",
-            "29 City / 35 Hwy",
-            "Auto, CVT w/Sport Mode",
-            "FWD",
-            "5 seats",
-            "4 Door Sedan"
-        ]
+        "XL":{
+            "Engine": "V6, i-VTEC, 3.5 Liter",
+            "Interior Color": "Beige Interior Color",
+            "Exterior Color": "Beige Exterior Color",
+            "Gas Mileage": "4 Door Sedan21 City / 33 Hwy",
+            "Transmission": "Auto, 6-Spd w/Sport Mode",
+            "Driver Train": "FWD"
+        },
+        "EX-L":{
+            "Engine": "4-Cyl, i-VTEC, 2.4 Liter",
+            "Interior Color": "Beige Interior Color",
+            "Exterior Color": "Red Exterior Color",
+            "Number Doors": "4 Door Sedan",
+            "Gas Mileage": "27 City / 36 Hwy",
+            "Transmission": "Auto, CVT w/Sport Mode",
+            "Driver Train": "FWD"
+        },
+        "EX":{
+            "Engine": "4-Cyl, i-VTEC, 2.4 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Black Exterior Color",
+            "Number Doors": "4 Door Sedan",
+            "Gas Mileage": "27 City / 36 Hwy",
+            "Transmission": "Auto, CVT w/Sport Mode",
+            "Driver Train": "FWD"
+        },
+        "Touring":{
+            "Engine": "4-Cyl, i-VTEC, Turbo, 1.5 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Black Exterior Color",
+            "Gas Mileage": "29 City / 35 Hwy",
+            "Transmission": "Auto, CVT w/Sport Mode",
+            "Number Doors": "4 Door Sedan",
+            "Driver Train": "FWD"
+        }
     },
     "Cr-z":{
-        "EX":[
-            "4-Cyl, Hybrid i-VTEC 1.5L",
-            "Black Interior Color",
-            "Gray Exterior Color",
-            "2 Door Coupe",
-            "36 City / 39 Hwy",
-            "Automatic, CVT",
-            "FWD"
-        ],
-        "Base":[
-            "4-Cyl, Hybrid i-VTEC 1.5L",
-            "Black Interior Color",
-            "Gray Exterior Color",
-            "2 Door Coupe",
-            "36 City / 39 Hwy",
-            "Automatic, CVT",
-            "FWD"
-        ]
+        "EX":{
+            "Engine": "4-Cyl, Hybrid i-VTEC 1.5L",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Gray Exterior Color",
+            "Number Doors": "2 Door Coupe",
+            "Gas Mileage": "36 City / 39 Hwy",
+            "Transmission": "Automatic, CVT",
+            "Driver Train": "FWD"
+        },
+        "Base":{
+            "Engine": "4-Cyl, Hybrid i-VTEC 1.5L",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Gray Exterior Color",
+            "Number Doors": "2 Door Coupe",
+            "Gas Mileage": "36 City / 39 Hwy",
+            "Transmission": "Automatic, CVT",
+            "Driver Train": "FWD"
+        }
     },
     "F-150":{
-        "XL":[
-            "V6, EcoBoost, Twin Turbo, 3.5 Liter",
-            "White Exterior Color",
-            "4 Door Truck",
-            "16 City / 22 Hwy",
-            "Automatic, 10-Spd w/Sport Mode",
-            "4WD"
-        ],
-        "XLT":[
-            "V8, Flex Fuel, 5.0 Liter",
-            "Black Interior Color",
-            "Black Exterior Color",
-            "4 Door Truck",
-            "Auto, 10-Spd Spt Mode",
-            "4WD"
-        ],
-        "Lariat":[
-            "V6, Hybrid, PowerBoost, 3.5 Liter",
-            "Black Interior Color",
-            "White Exterior Color",
-            "4 Door Truck",
-            "24 City / 24 Hwy",
-            "Automatic, 10-Spd Hybrid Electronic",
-            "4WD"
-        ]
+        "XL":{
+            "Engine": "V6, EcoBoost, Twin Turbo, 3.5 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "White Exterior Color",
+            "Number Doors": "4 Door Truck",
+            "Gas Mileage": "16 City / 22 Hwy",
+            "Transmission": "Automatic, 10-Spd w/Sport Mode",
+            "Driver Train": "4WD"
+        },
+        "XLT":{
+            "Engine": "V8, Flex Fuel, 5.0 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Black Exterior Color",
+            "Number Doors": "4 Door Truck",
+            "Gas Mileage": "16 City / 22 Hwy",
+            "Transmission": "Auto, 10-Spd Spt Mode",
+            "Driver Train": "4WD"
+        },
+        "Lariat":{
+            "Engine": "V6, Hybrid, PowerBoost, 3.5 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "White Exterior Color",
+            "Number Doors": "4 Door Truck",
+            "Gas Mileage": "24 City / 24 Hwy",
+            "Transmission": "Automatic, 10-Spd Hybrid Electronic",
+            "Driver Train": "4WD"
+        }
     },
     "Mustang":{
-        "Mustang V6":[
-            "V8, 5.0 Liter",
-            "Black Interior Color",
-            "Red Exterior Color",
-            "2 Door Coupe",
-            "16 City / 25 Hwy",
-            "Auto, 10-Spd SelectShft",
-            "RWD"
-        ],
-        "Mustang GT Fastback":[
-            "V8, 5.0 Liter",
-            "Black Interior Color",
-            "Silver Exterior Color",
-            "2 Door Coupe",
-            "16 City / 25 Hwy",
-            "Automatic, 10-Spd w/SelectShift",
-            "RWD"
-        ],
-        "Mustang Shelby GT500":[
-            "V8, Supercharged, 5.8L",
-            "Black Interior Color",
-            "White Exterior Color",
-            "2 Door Coupe",
-            "15 City / 24 Hwy",
-            "Manual, 6-Spd",
-            "RWD"
-        ]
+        "V6":{
+            "Engine": "V8, 5.0 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Red Exterior Color",
+            "Number Doors": "2 Door Coupe",
+            "Gas Mileage": "16 City / 25 Hwy",
+            "Transmission": "Auto, 10-Spd SelectShft",
+            "Driver Train": "RWD"
+        },
+        "GT Fastback":{
+            "Engine": "V8, 5.0 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Silver Exterior Color",
+            "Number Doors": "2 Door Coupe",
+            "Gas Mileage": "16 City / 25 Hwy",
+            "Transmission": "Automatic, 10-Spd w/SelectShift",
+            "Driver Train": "RWD"
+        },
+        "Shelby GT500":{
+            "Engine": "V8, Supercharged, 5.8L",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "White Exterior Color",
+            "Number Doors": "2 Door Coupe",
+            "Gas Mileage": "15 City / 24 Hwy",
+            "Transmission": "Manual, 6-Spd",
+            "Driver Train": "RWD"
+        }
     },
     "Bronco":{
-        "Bronco Sport":[
-            "3-Cyl, EcoBoost, Turbo, 1.5 Liter",
-            "Gray Interior Color",
-            "Gray Exterior Color",
-            "4 Door SUV",
-            "25 City / 28 Hwy",
-            "Automatic, 8-Spd",
-            "4WD"
-        ],
-        "Bronco Regular":[
-            "3-Cyl, EcoBoost, Turbo, 1.5 Liter",
-            "Black Interior Color",
-            "Black Exterior Color",
-            "4 Door SUV",
-            "25 City / 28 Hwy",
-            "Automatic, 8-Spd",
-            "4WD"
-        ]
-    }   
+        "Bronco Sport":{
+            "Engine": "3-Cyl, EcoBoost, Turbo, 1.5 Liter",
+            "Interior Color": "Gray Interior Color",
+            "Exterior Color": "Gray Exterior Color",
+            "Number Doors": "4 Door SUV",
+            "Gas Mileage": "25 City / 28 Hwy",
+            "Transmission": "Automatic, 8-Spd",
+            "Driver Train": "4WD"
+        },
+        "Bronco Regular":{
+            "Engine": "3-Cyl, EcoBoost, Turbo, 1.5 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Black Exterior Color",
+            "Number Doors": "4 Door SUV",
+            "Gas Mileage": "25 City / 28 Hwy",
+            "Transmission": "Automatic, 8-Spd",
+            "Driver Train": "4WD"
+        }
+    },
+    "Camry":{
+        "LE":{
+            "Engine": "4-Cyl, 2.5 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Gray Exterior Color",
+            "Number Doors": "4 Door Sedan",
+            "Gas Mileage": "28 City / 39 Hwy",
+            "Transmission": "Automatic, 8-Spd w/Sequential Shift",
+            "Driver Train": "FWD"
+        },
+        "SE":{
+            "Engine": "4-Cyl, 2.5 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Silver Exterior Color",
+            "Number Doors": "4 Door Sedan",
+            "Gas Mileage": "28 City / 39 Hwy",
+            "Transmission": "Automatic, 8-Spd w/Sequential Shift",
+            "Driver Train": "FWD"
+        },
+        "XLE":{
+            "Engine": "4-Cyl, 2.5 Liter",
+            "Interior Color": "Beige Interior Color",
+            "Exterior Color": "White Exterior Color",
+            "Number Doors": "4 Door Sedan",
+            "Gas Mileage": "24 City / 33 Hwy",
+            "Transmission": "Auto, 6-Spd SeqShft",
+            "Driver Train": "FWD"
+        }
+    },
+    "Corolla":{
+        "LE":{
+            "Engine": "4-Cyl, 2.5 Liter",
+            "Interior Color": "Beige Interior Color",
+            "Exterior Color": "White Exterior Color",
+            "Number Doors": "4 Door Sedan",
+            "Gas Mileage": "31 City / 40 Hwy",
+            "Transmission": "Automatic, 8-Spd w/Sequential Shift",
+            "Driver Train": "FWD"
+        },
+        "SE":{
+            "Engine": "4-Cyl, 2.5 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Silver Exterior Color",
+            "Number Doors": "4 Door Sedan",
+            "Gas Mileage": "31 City / 40 Hwy",
+            "Transmission": "Automatic, 8-Spd w/Sequential Shift",
+            "Driver Train": "FWD"
+        },
+        "Nightshade Edition":{
+            "Engine": "4-Cyl, 2.0 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Gray Exterior Color",
+            "Number Doors": "4 Door Sedan",
+            "Gas Mileage": "31 City / 40 Hwy",
+            "Transmission": "Automatic, CVT w/Dynamic Shift",
+            "Driver Train": "FWD"
+        }
+    },
+    "Tundra":{
+        "Platinum CrewMax":{
+            "Engine": "V8, 5.7 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Brown Exterior Color",
+            "Number Doors": "4 Door Truck",
+            "Gas Mileage": "13 City / 17 Hwy",
+            "Transmission": "Auto, 6-Spd Sequential",
+            "Driver Train": "4WD"
+        },
+        "SR5 CrewMax":{
+            "Engine": "V8, 5.7 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Gray Exterior Color",
+            "Number Doors": "4 Door Truck",
+            "Gas Mileage": "13 City / 17 Hwy",
+            "Transmission": "Automatic, 6-Spd w/Sequential Mode",
+            "Driver Train": "4WD"
+        },
+        "TRD CrewMax":{
+            "Engine": "V8, 5.7 Liter",
+            "Interior Color": "Black Interior Color",
+            "Exterior Color": "Gray Exterior Color",
+            "Number Doors": "4 Door Truck",
+            "Gas Mileage": "13 City / 17 Hwy",
+            "Transmission": "Automatic, 6-Spd w/Sequential Mode",
+            "Driver Train": "4WD"
+        }
+    }
 }

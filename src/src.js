@@ -78,6 +78,7 @@ async function modelList(slct1, htmlElement){
 }
 
 async function seriesList(selectId, htmlElement){
+    let fileName = 'series.json';
     console.log(`${selectId} <==> ${htmlElement}`);
     let mainDiv = document.getElementById('main');
     let seriesHtmlElement = document.getElementById('Series');
@@ -104,7 +105,8 @@ async function seriesList(selectId, htmlElement){
     let horizontalLine = document.createElement('hr');
     header.innerHTML = "Series:";
     let s1 = document.getElementById(selectId);
-    let seriesObj = await getSeries(selectedManufacturer, s1.value);
+    // let seriesObj = await getSeries(selectedManufacturer, s1.value);
+    let seriesObj = await getIt(selectedManufacturer, s1.value, fileName);
 
     await getOptionElemnet(seriesObj,element);
     divModel.appendChild(header);
@@ -113,7 +115,7 @@ async function seriesList(selectId, htmlElement){
     mainDiv.appendChild(divModel);
 }
 
-function selectedImage(seriesObj, model, manufacturer){
+async function selectedImage(seriesObj, model, manufacturer){
     let valueObj = document.getElementById(seriesObj);
     console.log(`MANUFACTURER: ${manufacturer}`);
     console.log(`MODEL: ${model}`);
@@ -137,6 +139,18 @@ function selectedImage(seriesObj, model, manufacturer){
     imgElement.setAttribute('class','vehicle-img');
     imgElement.setAttribute('src',`/images/${manufacturer}/${model}/${valueObj.value}.png`);
     divElement.appendChild(imgElement);
+
+    // Additional vehicle information
+    let addtlVehicleElement = await additionalVehicleInfo(model, valueObj.value);
+    let vehInfoDetailElement = await autoDetails(addtlVehicleElement); 
+    divElement.appendChild(vehInfoDetailElement);
+    // additionalVehicleInfo(model, valueObj.value);
+}
+
+async function additionalVehicleInfo(model, series){
+    let fileName = 'vehicleDetails.json';
+    return await getIt(model, series, fileName);
+
 }
 
 function manufactureTypes(){
@@ -195,6 +209,14 @@ async function getSeries(manufacturer, model){
     return seriesObj[manufacturer][model];
 }
 
+async function getIt(item1, item2, fileName){
+    let obj = await fetch(`../data/${fileName}`)
+    .then(response => response.json())
+    .catch(error => console.log(error));
+
+    return obj[item1][item2];
+}
+
 async function getOptionElemnet(obj,element){
     Object.entries(obj).forEach(exactObj =>{
         const [key, value] = exactObj;
@@ -203,4 +225,72 @@ async function getOptionElemnet(obj,element){
         optionElement.innerHTML = value.innerHtml;
         element.options.add(optionElement);
     });
+}
+
+async function setVehicleAdditionalInformation(vehData){
+    let vehicleInfoElement = document.getElementById('vehicleInformation');
+    let divVehInfo;
+    let divThis = document.createElement(`div`);
+    divThis.setAttribute('id','additionalVehicleInfo');
+    divThis.setAttribute('class','additionalVehicleInfo');
+    divThis.setAttribute('name','additionalVehicleInfo');
+    if(vehicleInfoElement !== null){
+        let vehicleInfoElements = document.querySelectorAll('[id=vehicleInformation]');
+        vehicleInfoElements.forEach((item) => {
+            console.log(`REMOVE ADDITIONAL VEHICLE INFORMATION!!!!`);
+            item.remove();
+        });
+    }
+    Object.entries(vehData).forEach((element) => {
+        const [key, value] = element;
+        console.log(key, value);
+        divVehInfo = document.createElement('div');
+        divVehInfo.setAttribute('class',`${key}`);
+        divVehInfo.setAttribute('id',`vehicleInformation`);
+        let header = document.createElement('h2');
+        let horizontalLine = document.createElement('hr');
+        let label = document.createElement('label');
+        label.innerHTML = value;
+        header.innerHTML = `${key}:`;
+        divVehInfo.appendChild(header);
+        divVehInfo.appendChild(label);
+        divVehInfo.appendChild(horizontalLine);
+        divThis.appendChild(divVehInfo);
+    });
+    return divThis;
+}
+
+async function autoDetails(vehData){
+    let mainTable = document.createElement('table');
+
+    let tableRowOne = document.createElement('tr');
+    let rowItemOne = document.createElement('td');
+    rowItemOne.innerHTML = vehData['Engine'];
+    let rowItemTwo = document.createElement('td');
+    rowItemTwo.innerHTML = vehData['Gas Mileage'];
+    let rowItemThree = document.createElement('td');
+    rowItemThree.innerHTML = vehData['Transmission'];
+    let rowItemFour = document.createElement('td');
+    rowItemFour.innerHTML = vehData['Driver Train'];
+    tableRowOne.appendChild(rowItemOne);
+    tableRowOne.appendChild(rowItemTwo);
+    tableRowOne.appendChild(rowItemThree);
+    tableRowOne.appendChild(rowItemFour);
+
+    let tableRowTwo = document.createElement('tr');
+    let rowOne = document.createElement('td');
+    rowOne.innerHTML = vehData['Exterior Color'];
+    let rowTwo = document.createElement('td');
+    rowTwo.innerHTML = vehData['Interior Color'];
+    let rowThree = document.createElement('td');
+    rowThree.innerHTML = vehData['Number Doors'];
+    tableRowTwo.appendChild(rowOne);
+    tableRowTwo.appendChild(rowTwo);
+    tableRowTwo.appendChild(rowThree);
+
+    mainTable.appendChild(tableRowOne);
+    mainTable.appendChild(tableRowTwo);
+
+    return mainTable;
+
 }
