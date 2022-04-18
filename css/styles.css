@@ -1,6 +1,6 @@
 body{
     background-attachment: fixed;
-    background-color: #a5afc4;
+    /* background-color: #a5afc4; */
 }
 
 h1{
@@ -82,4 +82,5 @@ table{
 td{
     padding: 20px 40px;
     font-size: 18px;
+    color: #1c87c9;
 }
