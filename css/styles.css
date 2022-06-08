@@ -23,7 +23,7 @@ h1{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     width: auto;
-    height: auto;
+    height: 575px;
     border: 20px solid rgb(89, 93, 134);
     background: #a5afc4;
     margin: 10px;
@@ -40,8 +40,8 @@ img{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    width: 1000px;
-    height: auto;
+    width: 940px;
+    height: autopx;
     border: 20px solid rgb(89, 93, 134);
     border-width: auto;
     margin: 10px;

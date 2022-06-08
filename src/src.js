@@ -87,6 +87,12 @@ async function seriesList(selectId, htmlElement){
         seriesHtmlElement.remove();
     }
 
+    let rightDivElement = document.getElementById('rightDiv');
+    console.log(`<>RIGHT DIV<> ${rightDivElement} <><>`);
+    if (rightDivElement !== null) {
+        rightDivElement.remove();
+    }
+
     let selectModel = document.getElementById('selectModel');
     let modelSel = selectModel.value;
 
@@ -121,18 +127,17 @@ async function selectedImage(seriesObj, model, manufacturer){
     console.log(`MODEL: ${model}`);
     console.log(`SERIES: ${valueObj.value}`);
 
-    let rightDivElement = document.getElementById('rightDiv');
-    console.log(`<><> ${rightDivElement} <><>`);
-    if (rightDivElement !== null) {
-        console.log(`REMOVE IMG DIV!`)
-        rightDivElement.remove();
-    }
-
     let divElement = document.createElement('div');
     divElement.setAttribute('class','rightDiv');
     divElement.setAttribute('id','rightDiv');
     divElement.setAttribute('name','rightDiv');
     // divElement.setAttribute('style','width: auto; height: auto;');
+
+    console.log(`<><> ${rightDivElement} <><>`);
+    if (rightDivElement !== null) {
+        console.log(`REMOVE IMG DIV!`)
+        rightDivElement.remove();
+    }
 
     document.body.appendChild(divElement);
     let imgElement = document.createElement('img');
